@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>My Notes</title>
+  <style>
+    body { font-family: system-ui; max-width: 920px; margin: 40px auto; }
+    .row { display:flex; gap: 24px; align-items:flex-start; }
+    .col { flex: 1; }
+    ul { padding-left: 18px; }
+    li { cursor: pointer; margin: 6px 0; }
+    input, textarea { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+    textarea { min-height: 240px; }
+    button { padding: 8px 12px; margin-right: 8px; }
+    .muted { color: #666; font-size: 14px; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 14px; }
+  </style>
+</head>
+<body>
+<h1>My Notes</h1>
+<div class="muted">Logged in as <span id="userEmail"></span></div>
+<div style="margin: 12px 0;">
+  <button id="newBtn">New</button>
+  <button id="saveBtn">Save</button>
+  <button id="deleteBtn">Delete</button>
+  <button id="logoutBtn">Log out</button>
+  <span id="status" class="muted" style="margin-left: 12px;"></span>
+</div>
+
+<div class="row">
+  <div class="col card">
+    <h3>Your notes</h3>
+    <ul id="notesList"></ul>
+  </div>
+
+  <div class="col card">
+    <h3>Editor</h3>
+    <input id="title" placeholder="Title" />
+    <textarea id="content" placeholder="Write your note..."></textarea>
+  </div>
+</div>
+
+<script type="module" src="./index.js"></script>
+</body>
+</html>
